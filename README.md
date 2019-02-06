@@ -182,3 +182,102 @@ Win32 API, Application Programming Interface
 "The number of Win32 API calls is extremely large, numbering in the thousands."
 
 #### 1.7 OPERATING SYSTEM STRUCTURE
+
+##### 1.7.1 Monolithic Systems
+
+"The operating system is written as a collection of procedures, linked together into a single large executable binary program."
+
+shared libraries, DLLs, Dynamic-Link-Libraries
+
+##### 1.7.2 Layered Systems
+
+##### 1.7.3 Microkernels
+
+"In fact, a strong case can be made for putting as little as possible in kernel mode because bugs in the kernel can bring down the system instantly."
+
+reincarnation server, mechanism, policy
+
+##### 1.7.4 Client-Server Model
+
+servers, clients, client-server
+
+"To obtain a service, a client process constructs a message saying what it wants and sends it to the appropriate service."
+
+##### 1.7.5 Virtual Machines
+
+z/VM, VM/370, virtual machine monitor, CMS, Conversational Monitor System, Virtual Machines Rediscovered, shared hosting
+
+"When a Web hosting company offers virtual machines for rent, a single physical machine can run many virtual machines, each of which appears to be a complete machine."
+
+type 1 hypervisor, machine simulators, binary translation, type 2 hypervisors, host operating system, guest operating system, paravirtualization, The Java Virtual Machine, JVM, Java Virtual Machine
+
+##### 1.7.6 Exokernels
+
+exokernel
+
+"Its job is to allocate resources to virtual machines and then check attempts to use them to make sure no machine is trying to use somebody else's resources."
+
+#### 1.8 THE WORLD ACCORDING TO C
+
+"The environment used for developing operating systems is very different from what individuals (such as students) are used to when writing small Java programs."
+
+##### 1.8.1 The C Language
+
+"This is not a guide to C, but a short summary of some of the key differences between C and languages like Python and especially Java."
+
+pointer
+
+"Pointers are a very powerful construct, but also a great source of errors when used carelessly."
+
+"Some things that C does not have include built-in strings, threads, packages, classes, objects, type safety, and garbage collection."
+
+##### 1.8.2 Header Files
+
+macros
+
+##### 1.8.3 Large Programming Projects
+
+object file, C preprocessor
+
+"Keeping track of which object files depend on which header files is completely unmanageable without help."
+
+linker
+
+##### The Model of Run Time
+
+"Once running, it may dynamically load pieces that were not statically included in the binary such as device drivers and file systems."
+
+#### 1.9 RESEARCH ON OPERATING SYSTEMS
+
+"Virtually all operating systems researchers realize that current operating systems are massive, inflexible, unreliable, insecure, and loaded with bugs, certain ones more than others (names withheld here to protect the guilty)."
+
+#### 1.10 OUTLINE OF THE REST OF THIS BOOK
+
+"As mentioned already, from the programmer's point of view, the primary purpose of an operating system is to provide some key abstractions, the most important of which are processes and threads, address spaces, and files."
+
+#### 1.11 METRIC UNITS
+
+"Thus a 1-KB memory contains 1024 bytes, not 1000 bytes."
+
+#### 1.12 SUMMARY
+
+"Operating systems can be viewed from two viewpoints: resource managers and extended machines."
+
+"In the resource-manager view, the operating system's job is to manage the different parts of the system efficiently."
+
+"In the extended-machine view, the job of the system is to provide the users with abstractions that are more convenient to use than the actual machine."
+
+"These include processes, address spaces, and files."
+
+"The heart of any operating system is the set of system calls that it can handle."
+
+"The first group of system calls relates to process creation and termination."
+
+"The second group is for reading and writing files."
+
+"The third group is for directory management."
+
+"The fourth group contains miscellaneous calls."
+
+### 2 PROCESSES AND THREADS
+
