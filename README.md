@@ -281,3 +281,43 @@ linker
 
 ### 2 PROCESSES AND THREADS
 
+"The most central concept in any operating system is the process: an abstraction of a running program."
+
+"Without the process abstraction, modern computing could not exist."
+
+#### 2.1 PROCESSES
+
+pseudoparallelism, multiprocessor
+
+##### 2.1.1 The Process Model
+
+sequential processes, processes, multiprogramming
+
+##### 2.1.2 Process Creation
+
+daemons, copy-on-write
+
+##### 2.1.3 Process Termination
+
+##### 2.1.4 Process Hierarchies
+
+"In UNIX, a process and all of its children and further descendants together form a process group."
+
+handle
+
+##### 2.1.5 Process States
+
+"When a process blocks, it does so because logically it cannot continue, typically because it is waiting for input that is not yet available."
+
+##### 2.1.6 Implementation of Processes
+
+process table, process control blocks, interrupt vector
+
+##### 2.1.7 Modeling Multiprogramming
+
+"When multiprogramming is used, the CPU utilization can be improved."
+
+degree of multiprogramming
+
+#### 2.2 THREADS
+
