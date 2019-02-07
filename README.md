@@ -375,3 +375,47 @@ pop-up thread
 
 #### 2.3 INTERPROCESS COMMUNICATION
 
+InterProcess Communication, IPC
+
+##### 2.3.1 Race Conditions
+
+spooler directory, printer daemon
+
+"Situations like this, where two or more processes are reading or writing some shared data and the final result depends on who runs precisely when, are called race conditions."
+
+##### 2.3.2 Critical Regions
+
+mutual exclusion, critical region, critical section
+
+##### 2.3.3 Mutual Exclusion with Busy Waiting
+
+Disabling Interrupts
+
+"On a single-processor system, the simplest solution is to have each process disable all interrupts just after entering its critical region and re-enable them just before leaving it."
+
+"This approach is generally unattractive because it is unwise to give user processes the power to turn off interrupts."
+
+Lock Variables
+
+"Unfortunately, this idea contains exactly the same fatal flaw that we saw in the spooler directory."
+
+Strict Alternation
+
+"C is powerful, efficient, and predictable, characteristics critical for writing operating systems."
+
+busy waiting, spin lock
+
+"This situation violates condition 3 set out above: process 0 is being blocked by a process not in its critical region."
+
+Peterson's Solution
+
+"By combining the idea of taking turns with the idea of lock variables and warning variables, a Dutch mathematician, T. Dekker, was the first one to devise a software solution to the mutual exclusion problem that does not require strict alternation."
+
+The TSL Instruction
+
+"It is important to note that locking the memory bus is very different from disabling interrupts."
+
+"In other words, critical regions work only if the processes cooperate."
+
+##### 2.3.4 Sleep and Wakeup
+
