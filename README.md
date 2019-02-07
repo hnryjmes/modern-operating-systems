@@ -345,3 +345,19 @@ thread, lightweight processes, multithreading
 
 ##### 2.2.3 POSIX Threads
 
+Pthreads
+
+##### 2.2.4 Implementing Threads in User Space
+
+"There are two main places to implement threads: user space and the kernel."
+
+thread table, jacket, wrapper
+
+"Another, and really the most devastating, argument against user-level threads is that programmers generally want threads precisely in applications where the threads block often, as, for example, in a multithreaded Web server."
+
+##### 2.2.5 Implementing Threads in the Kernel
+
+"When a thread wants to create a new thread or destroy an existing thread, it makes a kernel call, which then does the creation or destruction by updating the kernel thread table."
+
+##### 2.2.6 Hybrid Implementations
+
