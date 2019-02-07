@@ -422,3 +422,30 @@ The TSL Instruction
 priority inversion problem, The Producer-Consumer Problem, producer-consumer, bounded-buffer, wakeup waiting bit
 
 ##### 2.3.5 Semaphores
+
+semaphore, atomic action
+
+"This atomicity is absolutely essential to solving synchronization problems and avoiding race conditions."
+
+Solving the Producer-Consumer Problem Using Semaphores
+
+"This solution uses three semaphores: one called full for counting the number of slots that are full, one called empty for counting the number of slots that are empty, and one called mutex to make sure the producer and consumer do not access the buffer at the same time."
+
+binary semaphores
+
+"The mutex semaphore is used for mutual exclusion."
+
+synchronization
+
+##### 2.3.6 Mutexes
+
+"Mutexes are good only for managing mutual exclusion to some shared resource or piece of code."
+
+mutex, Futexes, futex
+
+"A futex consists of two parts: a kernel service and a user library."
+
+Mutexes in Pthreads, condition variables
+
+##### 2.3.7 Monitors
+
