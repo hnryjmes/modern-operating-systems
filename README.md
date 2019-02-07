@@ -419,3 +419,6 @@ The TSL Instruction
 
 ##### 2.3.4 Sleep and Wakeup
 
+priority inversion problem, The Producer-Consumer Problem, producer-consumer, bounded-buffer, wakeup waiting bit
+
+##### 2.3.5 Semaphores
