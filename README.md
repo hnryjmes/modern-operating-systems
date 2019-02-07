@@ -321,3 +321,27 @@ degree of multiprogramming
 
 #### 2.2 THREADS
 
+##### 2.2.1 Thread Usage
+
+threads
+
+"By decomposing such an application into multiple sequential threads that run in quasi-parallel, the programming model becomes simpler."
+
+"Instead, of thinking about interrupts, timers, and context switches, we can think about parallel processes."
+
+"Only now with threads we add a new element: the ability for the parallel entities to share an address space and all of its data among themselves."
+
+"This ability is essential for certain applications, which is why having multiple processes (with their separate address spaces) will not work."
+
+cache, dispatcher, worker thread, finite-state machine
+
+##### 2.2.2 The Classical Thread Model
+
+thread, lightweight processes, multithreading
+
+"Since every thread can access every memory address within the process' address space, one thread can read, write, or even wipe out another thread's stack."
+
+"There is no protection between threads because (1) it is impossible, and (2) it should not be necessary."
+
+##### 2.2.3 POSIX Threads
+
