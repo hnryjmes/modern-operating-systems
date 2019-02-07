@@ -361,3 +361,17 @@ thread table, jacket, wrapper
 
 ##### 2.2.6 Hybrid Implementations
 
+##### 2.2.7 Scheduler Activations
+
+scheduler activations, upcall
+
+##### 2.2.8 Pop-Up Threads
+
+pop-up thread
+
+##### 2.2.9 Making Single-Threaded Code Multithreaded
+
+"Local variables and parameters do not cause any trouble, but variables that are global to a thread but not global to the entire program are a problem."
+
+#### 2.3 INTERPROCESS COMMUNICATION
+
