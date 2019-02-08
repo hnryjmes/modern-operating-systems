@@ -449,3 +449,8 @@ Mutexes in Pthreads, condition variables
 
 ##### 2.3.7 Monitors
 
+monitor, condition variables
+
+"The conclusion is that semaphores are too low level and monitors are not usable except in a few programming languages."
+
+##### 2.3.8 Message Passing
