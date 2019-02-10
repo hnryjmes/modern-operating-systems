@@ -454,3 +454,16 @@ monitor, condition variables
 "The conclusion is that semaphores are too low level and monitors are not usable except in a few programming languages."
 
 ##### 2.3.8 Message Passing
+
+message passing, Design Issues for Message-Passing Systems, acknowledgement
+
+"It is essential that the receiver be able to distinguish a new message from the retransmission of an old one."
+
+Authentication, The Producer-Consumer Problem with Message Passing, mailbox, rendezvous
+
+"Message passing is commonly used in parallel programming systems."
+
+MPI, Message-Passing Interface
+
+##### 2.3.9 Barriers
+
