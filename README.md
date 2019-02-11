@@ -824,3 +824,52 @@ LDT, Local Descriptor Table, GDT, Global Descriptor Table
 ### 4 FILE SYSTEMS
 
 "While a process is running, it can store a limited amount of information within its own address space."
+
+"A second problem with keeping information within a process' address space is that when the process terminates, the information is lost."
+
+"A third problem is that it is frequently necessary for multiple processes to access (parts of) the information at the same time."
+
+"Just as we saw how the operating system abstracted away the concept of the processor to create the abstraction of a process and how it abstracted away the concept of physical memory to offer processes (virtual) address spaces, we can solve this problem with a new abstraction: the file."
+
+"Together, the abstractions of processes (and threads), address spaces, and files are the most important concepts relating to operating systems."
+
+Files
+
+"In fact, if you think of each file as a kind of address space, you are not that far off, except that they are used to model the disk instead of modeling the RAM."
+
+persistent, file system
+
+"From the user's standpoint, the most important aspect of a file system is how it appears, in other words, what constitutes a file, how files are named and protected, what operations are allowed on files, and so on."
+
+"The details of whether linked lists or bitmaps are used to keep track of free storage and how many sectors there are in a logical disk block are of no interest, although they are of great importance to the designers of the file system."
+
+"The first two are concerned with the user interface to files and directories, respectively."
+
+"Then comes a detailed discussion of how the file system is implemented and managed."
+
+#### 4.1 FILES
+
+##### 4.1.1 File Naming
+
+"A file is an abstraction mechanism."
+
+"This must be done in such a way as to shield the user from the details of how and where the information is stored, and how the disks actually work."
+
+"Some file systems distinguish between upper- and lowercase letters, whereas others do not."
+
+"UNIX falls in the first category; the old MS-DOS falls in the second."
+
+FAT-16, FAT-32, NTFS, ReFS, Resilient File System, exFAT
+
+"Exfat is the only modern Microsoft file system that OS X can both read and write."
+
+file extension
+
+"A file named file.txt might be some kind of text file, but that name is more to remind the owner than to convey any actual information to the computer."
+
+"On the other hand, a C compiler may actually insist that files it is to compile end in .c, and it may refuse to compile them if they do not."
+
+"However, the operating system does not care."
+
+##### 4.1.2 File Structure
+
