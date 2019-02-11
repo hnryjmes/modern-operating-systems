@@ -617,6 +617,10 @@ quick fit
 
 overlays, virtual memory, pages
 
+"Each page is a contiguous range of addresses."
+
+"These pages are mapped onto physical memory, but not all pages have to be in physical memory at the same time to run the program."
+
 "When the program references a part of its address space that is in physical memory, the hardware performs the necessary mapping on the fly."
 
 ##### 3.3.1 Paging
@@ -670,4 +674,82 @@ second chance
 "What second chance is looking for is an old page that has not been referenced in the most recent clock interval."
 
 ##### 3.4.5 The Clock Page Replacement Algorithm
+
+"Although second chance is a reasonable algorithm, it is unnecessarily inefficient because it is constantly moving pages around on its list."
+
+clock
+
+##### 3.4.6 The Least Recently Used (LRU) Page Replacement Algorithm
+
+LRU, Least Recently Used
+
+##### 3.4.7 Simulating LRU in Software
+
+NFU, Not Frequently Used, aging
+
+##### 3.4.8 The Working Set Page Replacement Algorithm
+
+demand paging, locality of reference, working set, thrashing, working set model, prepaging, current virtual time
+
+##### 3.4.9 The WSClock Page Replacement Algorithm
+
+"The basic working set algorithm is cumbersome, since the entire page table has to be scanned at each page fault until a suitable candidate is located."
+
+WSClock
+
+##### 3.4.10 Summary of Page Replacement Algorithms
+
+"The optimal algorithm evicts the page that will be referenced furthest in the future. Unfortunately, there is no way to determine which page this is, so in practice this algorithm cannot be used."
+
+"All in all, the two best algorithms are aging and WSClock."
+
+#### 3.5 DESIGN ISSUES FOR PAGING SYSTEMS
+
+##### 3.5.1 Local versus Global Allocation Policies
+
+local, global
+
+"In general, global algorithms work better, especially when the working set size can vary a lot over the lifetime of a process."
+
+PFF, Page Fault Frequency
+
+"On the other hand, for other page replacement algorithms, only a local strategy makes sense."
+
+##### 3.5.2 Load Control
+
+"A good way to reduce the number of processes competing for memory is to swap some of them to the disk and free up all the pages they are holding."
+
+##### 3.5.3 Page Size
+
+internal fragmentation, TLB
+
+##### 3.5.4 Separate Instruction and Data Spaces
+
+I-space, D-space
+
+"In a computer with this kind of design, both address spaces can be paged, independently from one another."
+
+##### 3.5.5 Shared Pages
+
+copy on write
+
+##### 3.5.6 Shared Libraries
+
+shared libraries, DLLs, Dynamic Link Libraries, undefined externals, position-independent code
+
+##### 3.5.7 Mapped Files
+
+memory-mapped files
+
+##### 3.5.8 Cleaning Policy
+
+paging daemon
+
+##### 3.5.9 Virtual Memory Interface
+
+distributed shared memory
+
+"The idea here is to allow multiple processes over a network to share a set of pages, possibly, but not necessarily, as a single shared linear address space."
+
+#### 3.6 IMPLEMENTATION ISSUES
 
