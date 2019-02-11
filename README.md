@@ -467,3 +467,9 @@ MPI, Message-Passing Interface
 
 ##### 2.3.9 Barriers
 
+barrier
+
+"When all of them are done, the new matrix (the input to the next iteration) will be finished, and all processes will be simultaneously released to start the next iteration."
+
+##### 2.3.10 Avoiding Locks: Read-Copy-Update
+
