@@ -873,3 +873,145 @@ file extension
 
 ##### 4.1.2 File Structure
 
+"Files can be structured in any of several ways."
+
+"Having the operating system regard files as nothing more than byte sequences provides the maximum amount of flexibility."
+
+"Central to the idea of a file being a sequence of records is the idea that the read operation returns one record and the write operation overwrites or appends one record."
+
+"No current general-purpose system uses this model as its primary file system any more, but back in the days of 80-column punched cards and 132-character line printer paper this was a common model on mainframe computers."
+
+key
+
+"The tree is sorted on the key field, to allow rapid searching for a particular key."
+
+"This type of file is clearly quite different from the unstructured byte streams used in UNIX and Windows and is used on some large mainframe computers for commercial data processing."
+
+##### 4.1.3 File Types
+
+Regular files, Directories, Character special files, Block special files
+
+"Regular files are generally either ASCII files or binary files."
+
+"The great advantage of ASCII files is that they can be displayed and printed as is, and they can be edited with any text editor."
+
+"Other files are binary, which just means that they are not ASCII files."
+
+"Listing them on the printer gives an incomprehensible listing full of random junk."
+
+"Although technically the file is just a sequence of bytes, the operating system will execute a file only if it has the proper format."
+
+"It has five sections: header, text, data, relocation bits, and symbol table."
+
+magic number
+
+##### 4.1.4 File Access
+
+sequential access, random-access files
+
+"If an airline customer calls up and wants to reserve a seat on a particular flight, the reservation program must be able to access the record for that flight without having to read the records for thousands of other flights first."
+
+##### 4.1.5 File Attributes
+
+attributes, metadata
+
+##### 4.1.6 File Operations
+
+"Different systems provide different operations to allow storage and retrieval."
+
+##### 4.1.7 An Example Program Using File-System Calls
+
+file descriptors
+
+#### 4.2 DIRECTORIES
+
+directories, folders
+
+##### 4.2.1 Single-Level Directory Systems
+
+root directory
+
+##### 4.2.2 Hierarchical Directory Systems
+
+##### 4.2.3 Path Names
+
+absolute path name, relative path name, working directory, current directory
+
+##### 4.2.4 Directory Operations
+
+symbolic link
+
+#### 4.3 FILE-SYSTEM IMPLEMENTATION
+
+"Users are concerned with how files are named, what operations are allowed on them, what the directory tree looks like, and similar interface issues."
+
+"Implementors are interested in how files and directories are stored, how disk space is managed, and how to make everything work efficiently and reliably."
+
+##### 4.3.1 File-System Layout
+
+MBR, Master Boot Record, boot block, superblock
+
+"Typical information in the superblock includes a magic number to identify the file-system type, the number of blocks in the file system, and other key administrative information."
+
+##### 4.3.2 Implementing Files
+
+Contiguous Allocation
+
+"Unfortunately, contiguous allocation also has a very serious drawback: over the course of time, the disk becomes fragmented."
+
+UDF, Universal Disk Format, extents, Linked-List Allocation
+
+"Unlike contiguous allocation, every disk block can be used in this method." 
+
+Linked-List Allocation Using a Table in Memory, FAT, File Allocation Table
+
+"The primary disadvantage of this method is that the entire table must be in memory all the time to make it work."
+
+"Thus the table will take up 3 GB or 2.4 GB of main memory all the time, depending on whether the system is optimized for space or time."
+
+I-nodes, i-node, index-node
+
+##### 4.3.3 Implementing Directories
+
+"In all cases,the main function of the directory system is to map the ASCII name of the file onto the information needed to locate the data."
+
+"In all of the designs so far, directories are searched linearly from beginning to end when a file name has to be looked up."
+
+"One way to speed up the search is to use a hash table in each directory."
+
+"Using a hash table has the advantage of much faster lookup, but the disadvantage of more complex administration."
+
+"It is only really a serious candidate in systems where it is expected that directories will routinely contain hundreds or thousands of files."
+
+##### 4.3.4 Shared Files
+
+link, Directed Acyclic Graph, DAG, symbolic linking
+
+"If C subsequently tries to remove the file, the system is faced with a problem."
+
+"If it removes the file and clears the i-node, B will have a directory entry pointing to an invalid i-node."
+
+"With symbolic links this problem does not arise because only the true owner has a pointer to the i-node."
+
+"The problem with symbolic links is the extra overhead required."
+
+##### 4.3.5 Log-Structured File Systems
+
+Log-structured File System, cleaner
+
+##### 4.3.6 Journaling File Systems
+
+"The basic idea here is to keep a log of what the file system is going to do before it does it, so that if the system crashes before it can do its planned work, upon rebooting the system can look in the log to see what was going on at the time of the crash and finish the job."
+
+journaling file systems
+
+"Only after the log entry has been written, do the various operations begin."
+
+idempotent
+
+"Journaling file systems have to arrange their data structures and loggable operations so they all are idempotent."
+
+atomic transaction
+
+##### 4.3.7 Virtual File Systems
+
