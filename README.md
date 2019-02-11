@@ -563,3 +563,111 @@ starvation
 
 ### 3 MEMORY MANAGEMENT
 
+"In this chapter we will study how operating systems create abstractions from memory and how they manage them."
+
+memory hierarchy, memory manager
+
+"Since managing the lowest level of cache memory is normally done by the hardware, the focus of this chapter will be on the programmer's model of main memory and how it can be managed."
+
+#### 3.1 NO MEMORY ABSTRACTION
+
+"Thus, the model of memory presented to the programmer was simply physical memory, a set of addresses from 0 to some maximum, each address corresponding to a cell containing some number of bits, commonly eight."
+
+"Under these conditions, it was not possible to have two running programs in memory at the same time."
+
+"If the first program wrote a new value to, say, location 2000, this would erase whatever value the second program was storing there."
+
+"Nothing would work and both programs would crash almost immediately."
+
+BIOS, Running Multiple Programs Without a Memory Abstraction, static relocation, e-Cos
+
+#### 3.2 A MEMORY ABSTRACTION: ADDRESS SPACES
+
+##### 3.2.1 The Notion of an Address Space
+
+address space, Base and Limit Registers, dynamic relocation
+
+"What it does is map each process' address space onto a different part of physical memory in a simple way."
+
+base, limit
+
+##### 3.2.2 Swapping
+
+swapping, virtual memory, memory compaction
+
+##### 3.2.3 Managing Free Memory
+
+Memory Management with Bitmaps
+
+"A bitmap provides a simple way to keep track of memory words in a fixed amount of memory because the size of the bitmap depends only on the size of memory and the size of the allocation unit."
+
+Memory Management with Linked Lists
+
+"When the processes and holes are kept on a list sorted by address, several algorithms can be used to allocate memory for a created process (or an existing process being swapped in from disk)."
+
+first fit, next fit, best fit, worst fit
+
+"All four algorithms can be speeded up by maintaining separate lists for processes and holes."
+
+"In this way, all of them devote their full energy to inspecting holes, not processes."
+
+quick fit
+
+#### 3.3 VIRTUAL MEMORY
+
+overlays, virtual memory, pages
+
+"When the program references a part of its address space that is in physical memory, the hardware performs the necessary mapping on the fly."
+
+##### 3.3.1 Paging
+
+paging, virtual addresses, virtual address space, MMU, Memory Management Unit, page frames, Present/absent bit, page fault, page table
+
+##### 3.3.2 Page Tables
+
+Structure of a Page Table Entry, dirty bit
+
+##### 3.3.3 Speeding Up Paging
+
+Translation Lookaside Buffers, TLB, Translation Lookaside Buffer, associative memory, Software TLB Management, soft miss, hard miss, page table walk, minor page fault, major page fault
+
+"Third, it is possible that the program simple accessed an invalid address and no mapping needs to be added in the TLB at all."
+
+segmentation fault
+
+##### 3.3.4 Page Tables for Large Memories
+
+Multilevel Page Tables, multilevel page table, page directory, page directory pointer table, page map level 4, Inverted Page Tables, inverted page tables
+
+#### 3.4 PAGE REPLACEMENT ALGORITHMS
+
+##### 3.4.1 The Optimal Page Replacement Algorithm
+
+"Although this method is useful for evaluating page replacement algorithms, it is of no use in practical systems."
+
+##### 3.4.2 The Not Recently Used Page Replacement Algorithm
+
+NRU, Not Recently Used
+
+"Implicit in this algorithm is the idea that it is better to remove a modified page that has not been referenced in at least one clock tick (typically about 20 msec) than a clean page that is in heavy use."
+
+##### 3.4.3 The First-In, First-Out (FIFO) Page Replacement Algorithm
+
+FIFO, First-In, First-Out
+
+"The new one goes on the back of the list; the one at the front of the list is dropped."
+
+"The operating system maintains a list of all pages currently in memory, with the most recent arrival at the tail and the least recent arrival at the head."
+
+"When applied to stores, FIFO might remove mustache wax, but it might also remove flour, salt, or butter." 
+
+"When applied to computers the same problem arises: the oldest page may still be useful."
+
+##### 3.4.4 The Second-Chance Page Replacement Algorithm
+
+second chance
+
+"What second chance is looking for is an old page that has not been referenced in the most recent clock interval."
+
+##### 3.4.5 The Clock Page Replacement Algorithm
+
