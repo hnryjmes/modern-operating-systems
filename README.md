@@ -753,3 +753,74 @@ distributed shared memory
 
 #### 3.6 IMPLEMENTATION ISSUES
 
+##### 3.6.1 Operating System Involvement with Paging
+
+"There are four times when the operating system has paging-related work to do: process creation time, process execution time, page fault time, and process termination time."
+
+##### 3.6.2 Page Fault Handling
+
+##### 3.6.3 Instruction Backup
+
+"Fortunately, on some machines the CPU designers provide a solution, usually in the form of a hidden internal register into which the program counter is copied just before each instruction is executed."
+
+##### 3.6.4 Locking Pages in Memory
+
+"Virtual memory and I/O interact in subtle ways."
+
+pinning
+
+##### 3.6.5 Backing Store
+
+"The simplest algorithm for allocating page space on the disk is to have a special swap partition on the disk or, even better, on a separate disk from the file system (to balance the I/O load).
+
+##### 3.6.6 Separation of Policy and Mechanism
+
+"This principle can be applied to memory management by having most of the memory manager run as a user-level process."
+
+#### 3.7 SEGMENTATION
+
+"The virtual memory discussed so far is one-dimensional because the virtual addresses go from 0 to some maximum address, one address after another."
+
+segments
+
+##### 3.7.1 Implementation of Pure Segmentation
+
+checkerboarding, external fragmentation
+
+##### 3.7.2 Segmentation with Paging: MULTICS
+
+"It was started as a research project at M.I.T. and went live in 1969."
+
+"The last MULTICS system was shut down in 2000, a run of 31 years."
+
+##### 3.7.3 Segmentation with Paging: The Intel x86
+
+"Up until the x86-64, the virtual memory system of the x85 resembled that of MULTICS in many ways, including the presence of both segmentation and paging."
+
+"As of x86-64, segmentation is considered obsolete and is no longer supported, except in legacy mode."
+
+LDT, Local Descriptor Table, GDT, Global Descriptor Table
+
+"So why did Intel kill what was a variant of the perfectly good MULTICS memory model that it supported for close to three decades?"
+
+"Probably the main reason is that neither UNIX nor Windows ever used it, even though it was quite efficient because it eliminated system calls, turning them into lightning-fast procedure calls to the relevant address within a protected operating system segment."
+
+#### 3.8 RESEARCH ON MEMORY MANAGEMENT
+
+"More generally, research on paging is still ongoing, but it focuses on newer kinds of systems."
+
+#### 3.9 SUMMARY
+
+"Some operating systems allow only one process at a time in memory, while others support multiprogramming."
+
+"When swapping is used, the system can handle more processes than it has room for in memory."
+
+"Modern computers often have some form of virtual memory."
+
+"Sometimes segmentation and paging are combined to provide a two-dimensional virtual memory."
+
+"Today, even the 64-bit version of the x86 no longer supports real segmentation."
+
+### 4 FILE SYSTEMS
+
+"While a process is running, it can store a limited amount of information within its own address space."
