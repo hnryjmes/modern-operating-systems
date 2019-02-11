@@ -473,3 +473,62 @@ barrier
 
 ##### 2.3.10 Avoiding Locks: Read-Copy-Update
 
+RCU, Read-Copy-Update, read-side critical section, grace period
+
+#### 2.4 SCHEDULING
+
+scheduler, scheduling algorithm
+
+"Many of the same issues that apply to process scheduling also apply to thread scheduling, although some are different."
+
+##### 2.4.1 Introduction to Scheduling
+
+"In addition to picking the right process to run, the scheduler also has to worry about making efficient use of the CPU because process switching is expensive."
+
+Process Behavior, compute-bound, CPU-bound, I/O-bound
+
+"Compute-bound processes typically have long CPU bursts and thus infrequent I/O waits, whereas I/O-bound processes have short CPU bursts and thus frequent I/O waits."
+
+"It is worth noting that as CPUs get faster, processes tend to get more I/O-bound."
+
+When to Schedule, nonpreemptive, preemptive, Categories of Scheduling Algorithms, Scheduling Algorithm Goals, Throughput, Turnaround time, response time, proportionality
+
+##### 2.4.2 Scheduling in Batch Systems
+
+First-Come, First-Served, first-come, first-served
+
+"It is also fair in the same sense that allocating scarce concert tickets or brand-new iPhones to people who are willing to stand on line starting at 2 A.M. is fair."
+
+Shortest Job First, shortest job first
+
+"It is worth pointing out that shortest job first is optimal only when all the jobs are available simultaneously."
+
+Shortest Remaining Time Next, shortest remaining time next
+
+##### 2.4.3 Scheduling in Interactive Systems
+
+Round-Robin Scheduling, round robin, quantum, process switch, context switch, Priority Scheduling, priority scheduling
+
+"To prevent high-priority processes from running indefinitely, the scheduler may decrease the priority of the currently running process at each clock tick (i.e., at each clock interrupt)."
+
+Multiple Queues, Shortest Process Next, aging, Guaranteed Scheduling, Lottery Scheduling, lottery scheduling, Fair-Share Scheduling
+
+##### 2.4.4 Scheduling in Real-Time Systems
+
+real-time, hard real time, soft real time, periodic, aperiodic, schedulable
+
+"Static scheduling works only when there is perfect information available in advance about the work to be done and the deadlines that have to be met."
+
+##### 2.4.5 Policy Versus Mechanism
+
+scheduling mechanism, scheduling policy
+
+##### 2.4.6 Thread Scheduling
+
+"In practice, round-robin scheduling and priority scheduling are most common."
+
+#### 2.4 CLASSICAL IPC PROBLEMS
+
+##### 2.5.1 The Dining Philosophers Problem
+
+dining philosophers problem
