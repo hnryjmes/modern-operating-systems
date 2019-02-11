@@ -243,7 +243,7 @@ object file, C preprocessor
 
 linker
 
-##### The Model of Run Time
+##### 1.8.4 The Model of Run Time
 
 "Once running, it may dynamically load pieces that were not statically included in the binary such as device drivers and file systems."
 
@@ -532,3 +532,34 @@ scheduling mechanism, scheduling policy
 ##### 2.5.1 The Dining Philosophers Problem
 
 dining philosophers problem
+
+"Suppose that all five philosophers take their left forks simultaneously."
+
+"None will be able to take their right forks, and there will be a deadlock."
+
+starvation
+
+##### 2.5.2 The Readers and Writers Problem
+
+"It is acceptable to have multiple processes reading the database at the same time, but if one process is updating (writing) the database, no other processes may have access to the database, not even readers."
+
+#### 2.6 RESEARCH ON PROCESSES AND THREADS
+
+"All in all, processes, threads, and scheduling are not hot topics for research as they once were."
+
+"The research has moved on to topics like power management, virtualization, clouds, and security."
+
+#### 2.7 SUMMARY
+
+"To hide the effects of interrupts, operating systems provide a conceptual model consisting of sequential processes running in parallel."
+
+"For some applications it is useful to have multiple threads of control within a single process."
+
+"Processes can communicate with one another using interprocess communication primitives, for example, semaphores, monitors, or messages."
+
+"Interprocess communication primitives can be used to solve such problems as the producer-consumer, dining philosophers, and reader-writer."
+
+"A great many scheduling algorithms have been studied."
+
+### 3 MEMORY MANAGEMENT
+
