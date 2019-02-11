@@ -1015,3 +1015,63 @@ atomic transaction
 
 ##### 4.3.7 Virtual File Systems
 
+VFS, virtual file system, VFS interface, NFS, Network File System
+
+"Internally, most VFS implementations are essentially object oriented, even if they are written in C rather than C++."
+
+"In this manner, it becomes relatively straightforward to add new file systems."
+
+"To make one, the designers first get a list of function calls the VFS expects and then write their file system to provide all of them."
+
+#### 4.4 FILE-SYSTEM MANAGEMENT AND OPTIMIZATION
+
+##### 4.4.1 Disk-Space Management
+
+"Two general strategies are possible for storing an n byte file: n consecutive bytes of disk space are allocated, or the file is split up into a number of (not necessarily) contiguous blocks."
+
+Block Size, Keeping Track of Free Blocks, Disk Quotas
+
+##### 4.4.2 File-System Backups
+
+recycle bin, incremental dumps, physical dump, logical dump
+
+##### 4.4.3 File-System Consistency
+
+missing block
+
+##### 4.4.4 File-System Performance
+
+Caching, block cache, buffer cache, write-through caches, Block Read Ahead, Reducing Disk-Arm Motion, solid-state disks, SSD
+
+##### 4.4.5 Defragmenting Disks
+
+#### 4.5 EXAMPLE FILE SYSTEMS
+
+##### 4.5.1 The MS-DOS File System
+
+cluster sizes
+
+##### 4.5.2 The UNIX V7 File System
+
+single indirect block, double indirect block, triple indirect block
+
+##### 4.5.3 CD-ROM File Systems
+
+The ISO 9660 File System, ISO 9660
+
+primary volume descriptor, Rock Ridge Extensions, Rock Ridge, Joliet Extensions, Joliet
+
+#### 4.6 RESEARCH ON FILE SYSTEMS
+
+"File systems have always attracted more research than other parts of the operating system and that is still the case."
+
+#### 4.7 SUMMARY
+
+"The file system designers have to be concerned with how storage is allocated, and how the system keeps track of which block goes with which file."
+
+"Possibilities include contiguous files, linked lists, file-allocation tables, and i-nodes."
+
+"File-system performance is important and can be enhanced in several ways, including caching, read ahead, and carefully placing the blocks of a file close to each other."
+
+### 5 INPUT/OUTPUT
+
