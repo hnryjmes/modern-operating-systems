@@ -1075,3 +1075,24 @@ primary volume descriptor, Rock Ridge Extensions, Rock Ridge, Joliet Extensions,
 
 ### 5 INPUT/OUTPUT
 
+#### 5.1 PRINCIPLES OF I/O HARDWARE
+
+"Programmers look at the interface presented to the software - the commands the hardware accepts, the functions it carries out, and the errors that can be reported back."
+
+##### 5.1.1 I/O Devices
+
+block devices, character devices
+
+"A character device delivers or accepts a stream of characters, without regard to any block structure."
+
+##### 5.1.2 Device Controllers
+
+device controller, adapter, preamble, ECC, Error-Correcting Code, CRT, Cathode Ray Tube
+
+##### 5.1.3 Memory-Mapped I/O
+
+I/O port, I/O port space, memory-mapped I/O
+
+##### 5.1.4 Direct Memory Access
+
+DMA, Direct Memory Access
