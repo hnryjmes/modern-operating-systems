@@ -1095,4 +1095,7 @@ I/O port, I/O port space, memory-mapped I/O
 
 ##### 5.1.4 Direct Memory Access
 
-DMA, Direct Memory Access
+DMA, Direct Memory Access, cycle stealing, burst mode, fly-by mode
+
+##### 5.1.5 Interrupts Revisited
+
