@@ -1103,3 +1103,107 @@ interrupt vector, Precise and Imprecise Interrupts, precise interrupt, imprecise
 
 #### 5.2 PRINCIPLES OF I/O SOFTWARE
 
+##### 5.2.1 Goals of the I/O Software
+
+device independence, uniform naming, mounted, error handling, synchronous, asynchronous, buffering
+
+##### 5.2.2 Programmed I/O
+
+programmed I/O, polling, busy waiting
+
+##### 5.2.3 Interrupt-Driven I/O
+
+##### 5.2.4 I/O Using DMA
+
+"An obvious disadvantage of interrupt-driven I/O is that an interrupt occurs on every character."
+
+#### 5.3 I/O SOFTWARE LAYERS
+
+##### 5.3.1 Interrupt Handlers
+
+##### 5.3.2 Device Drivers
+
+device driver, block devices, character devices, reentrant
+
+##### 5.3.3 Device-Independent I/O Software
+
+Uniform Interfacing for Device Drivers, major device number, minor device number, Buffering, double buffering, circular buffer, Error Reporting, Allocating and Releasing Dedicated Devices, Device-Independent Block Size
+
+##### 5.3.4 User-Space I/O Software
+
+Spooling, daemon, spooling directory
+
+#### 5.4 DISKS
+
+##### 5.4.1 Disk Hardware
+
+Magnetic Disks, IDE, Integrated Drive Electronics, SATA, Serial ATA, overlapped seeks, logical block addressing, RAID, RAID, Redundant Array of Inexpensive Disks, SLED, Single Large Expensive Disk, striping
+
+##### 5.4.2 Disk Formatting
+
+low-level format, cylinder skew, head skew, single interleaving, double interleaving, MBR, Master Boot Record, GPT, GUID Partition Table, high-level format
+
+##### 5.4.3 Disk Arm Scheduling Algorithms
+
+FCFS, First-Come, First-Served, SSF, Shortest Seek First
+
+##### 5.4.4 Error Handling
+
+AV disks, Audio Visual disks
+
+##### 5.4.5 Stable Storage
+
+stable storage, Stable writes, Stable reads, Crash recovery, nonvolatile RAM
+
+#### 5.5 CLOCKS
+
+Clocks, timers
+
+##### 5.5.1 Clock Hardware
+
+one-shot mode, square-wave mode, clock ticks, UTC, Universal Coordinated Time
+
+##### 5.5.2 Clock Software
+
+real time, watch-dog timers
+
+##### 5.5.3 Soft Timers
+
+Soft timers
+
+#### 5.6 USER INTERFACES: KEYBOARD, MOUSE, MONITOR
+
+terminals
+
+##### 5.6.1 Input Software
+
+Keyboard Software, scan code, raw mode, cooked mode, canonical mode, Noncanonical mode, echoing, escape character, Mouse Software, mickey, Bluetooth
+
+##### 5.6.2 Output Software
+
+Text Windows, escape sequences, termcap, The X Window System, X Window System, X, X server, X clients, Xlib, Intrinsics, widgets, Motif, window manager, resource, Graphical User Interfaces, GUI, Graphical User Interface, graphics adapter, video RAM, window, methods, Hungarian notation, WndProc, GDI, Graphics Device Interface, device context, Bitmaps, metafile, bitmap, DIB, Device Independent Bitmap, Fonts, Touch Screens, Resistive screens, ITO, Indium Tin Oxide, Capacitive Screens, multitouch, ghosting
+
+#### 5.7 THIN CLIENTS
+
+thin clients, Chromebook, ChromeOS, Web Apps
+
+#### 5.8 POWER MANAGEMENT
+
+##### 5.8.1 Hardware Issues
+
+##### 5.8.2 Operating System Issues
+
+The Display, The Hard Disk, The CPU, The Memory, Wireless Communication, Thermal Management, Battery Management, Driver Interface, ACPI, Advanced Configuration and Power Interface
+
+##### 5.8.3 Application Program Issues
+
+#### 5.9 RESEARCH ON INPUT/OUTPUT
+
+#### 5.10 SUMMARY
+
+"A substantial fraction of any operating system is concerned with I/O."
+
+"I/O can be structured in four levels: the interrupt-service procedures, the device drivers, the device-independent I/O software, and the I/O libraries and spoolers that run in user space."
+
+### 6 DEADLOCKS
+
