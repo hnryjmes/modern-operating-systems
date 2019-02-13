@@ -1099,3 +1099,7 @@ DMA, Direct Memory Access, cycle stealing, burst mode, fly-by mode
 
 ##### 5.1.5 Interrupts Revisited
 
+interrupt vector, Precise and Imprecise Interrupts, precise interrupt, imprecise interrupt
+
+#### 5.2 PRINCIPLES OF I/O SOFTWARE
+
