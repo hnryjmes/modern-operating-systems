@@ -1207,3 +1207,33 @@ The Display, The Hard Disk, The CPU, The Memory, Wireless Communication, Thermal
 
 ### 6 DEADLOCKS
 
+deadlock
+
+"If process A locks record R1 and process B locks record R2, and then each process tries to lock the other one's record, we also have a deadlock."
+
+#### 6.1 RESOURCES
+
+resources
+
+##### 6.1.1 Preemptable and Nonpreemptable Resources
+
+preemptable resource, nonpreemptable resource
+
+##### 6.1.2 Resource Acquisition
+
+#### 6.2 INTRODUCTION TO DEADLOCKS
+
+"A set of processes is deadlocked if each process in the set is waiting for an event that only another process in the set can cause."
+
+resource deadlock
+
+##### 6.2.1 Conditions for Resource Deadlocks
+
+##### 6.2.2 Deadlock Modeling
+
+#### 6.3 THE OSTRICH ALGORITHM
+
+#### 6.4 DEADLOCK DETECTION AND RECOVERY
+
+##### 6.4.1 Deadlock Detection with One Resource of Each Type
+
