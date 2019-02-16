@@ -1237,3 +1237,13 @@ resource deadlock
 
 ##### 6.4.1 Deadlock Detection with One Resource of Each Type
 
+##### 6.4.2 Deadlock Detection with Multiple Resources of Each Type
+
+existing resource vector, available resource vector, current allocation matrix, request matrix
+
+##### 6.4.3 Recovery from Deadlock
+
+Recovery through Preemption, Recovery through Rollback, checkpointed, Recovery through Killing Processes
+
+#### 6.5 DEADLOCK AVOIDANCE
+
