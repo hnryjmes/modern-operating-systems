@@ -1247,3 +1247,65 @@ Recovery through Preemption, Recovery through Rollback, checkpointed, Recovery t
 
 #### 6.5 DEADLOCK AVOIDANCE
 
+##### 6.5.1 Resource Trajectories
+
+##### 6.5.2 Safe and Unsafe States
+
+safe
+
+##### 6.5.3 The Banker's Algorithm for a Single Resource
+
+banker's algorithm
+
+##### 6.5.4 The Banker's Algorithm for Multiple Resources
+
+"Unfortunately, few authors have had the audacity to point out that although in theory the algorithm is wonderful, in practice it is essentially useless because processes rarely know in advance what their maximum resource needs will be."
+
+#### 6.6 DEADLOCK PREVENTION
+
+##### 6.6.1 Attacking the Mutual-Exclusion Condition
+
+##### 6.6.2 Attacking the Hold-and-Wait Condition
+
+##### 6.6.3 Attacking the No-Preemption Condition
+
+##### 6.6.4 Attacking the Circular Wait Condition
+
+#### 6.7 OTHER ISSUES
+
+##### 6.7.1 Two-Phase Locking
+
+two-phase locking
+
+##### 6.7.2 Communication Deadlocks
+
+competition synchronization, communication deadlock, protocol, host, router
+
+##### 6.7.3 Livelock
+
+"However, if the other process does the same thing at exactly the same time, they will be in the situation of two people trying to pass each other on the street when both of them politely step aside, and yet no progress is possible, because they keep stepping the same way at the same time."
+
+livelock
+
+##### 6.7.4 Starvation
+
+starvation
+
+#### 6.8 RESEARCH ON DEADLOCKS
+
+#### 6.9 SUMMARY
+
+"Deadlock is a potential problem in any operating system."
+
+"It occurs when all the members of a set of processes are blocked waiting for an event that only other members of the same set can cause."
+
+"This situation causes all the processes to wait forever."
+
+"Resource deadlock can be avoided by keeping track of which states are safe and which are unsafe."
+
+"Resource deadlock can be structurally prevented by building the system in such a way that it can never occur by design."
+
+"Livelock is similar to deadlock in that it can stop all forward progress, but it is technically different since it involves processes that are not actually blocked."
+
+### 7 VIRTUALIZATION AND THE CLOUD
+
