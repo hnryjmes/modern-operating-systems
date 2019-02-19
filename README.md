@@ -1309,3 +1309,107 @@ starvation
 
 ### 7 VIRTUALIZATION AND THE CLOUD
 
+sandboxing, VMM, Virtual Machine Monitor, hypervisor, virtualization, cloud
+
+#### 7.1 HISTORY
+
+SIMMON, CP-40, CP/CMS, VM/370, Disco, VMware, Xen, KVM, VirtualBox, Hyper-V, Parallels
+
+#### 7.2 REQUIREMENTS FOR VIRTUALIZATION
+
+Safety, Fidelity, Efficiency, interpreter, sensitive instructions, privileged instructions, VT, Virtualization Technology, SVM, Secure Virtual Machine
+
+"The basic idea is to create containers in which virtual machines can be run."
+
+trap-and-emulate, binary translation, paravirtualization, full virtualization, hypercalls, process-level virtualization
+
+#### 7.3 TYPE 1 AND TYPE 2 HYPERVISOR
+
+type 1 hypervisor, virtual machines, type 2 hypervisor, guest operating system, host operating system, VMware Workstation, hosted hypervisors, virtual disk
+
+#### 7.4 TECHNIQUES FOR EFFICIENT VIRTUALIZATION
+
+virtual kernel mode
+
+##### 7.4.1 Virtualizing the Unvirtualizable
+
+binary translation, protection rings, basic block, world switch
+
+##### 7.4.2 The Cost of Virtualization
+
+IF, Interrupt Flag
+
+#### 7.5 ARE HYPERVISORS MICROKERNELS DONE RIGHT?
+
+paravirtualization, hypercalls, API, Application Programming Interface, VMI, Virtual Machine Interface, paravirt ops
+
+#### 7.6 MEMORY VIRTUALIZATION
+
+"Virtualization greatly complicates memory management."
+
+shadow page table, guest-induced page faults, hypervisor-induced page faults, VM exit, Hardware Support for Nested Page Tables, nested page tables, EPT, Extended Page Tables, guest virtual addresses, guest physical addresses, host physical addresses, machine physical addresses, Reclaiming Memory, overcommitment, deduplication, ballooning
+
+#### 7.7 I/O VIRTUALIZATION
+
+I/O MMUs, I/O MMU, Device pass through, Device isolation, interrupt remapping, Device Domains, domain 0, Single Root I/O Virtualization, Single root I/O virtualization, SR-IOV, PF, Physical Functions, Virtual Functions
+
+#### 7.8 VIRTUAL APPLIANCES
+
+virtual appliances
+
+"As an example, Amazon's EC2 cloud has many pre-packaged virtual appliances available for its clients, which it offers as convenient software services (“Software as a Service”)."
+
+#### 7.9 VIRTUAL MACHINES ON MULTICORE CPUS
+
+Deduplication, transparent page sharing, content-based page sharing, copy on write
+
+"The combination of multicore, virtual machines, hypervisor, and microkernels is going to radically change the way people think about computer systems."
+
+#### 7.10 LICENSING ISSUES
+
+#### 7.11 CLOUDS
+
+On-demand self-service, Broad network access, Resource pooling, Rapid elasticity, Measured service
+
+##### 7.11.1 Clouds as a Service
+
+IAAS, Infrastructure As A Service, PAAS, Platform As A Service, SAAS, Software As A Service
+
+"One example of an IAAS cloud is Amazon EC2, which happens to be based on the Xen hypervisor and counts multiple hundreds of thousands of physical machines."
+
+vendor lock-in
+
+##### 7.11.2 Virtual Machine Migration
+
+live migration, pre-copy memory migration, seamless live migration
+
+##### 7.11.3 Checkpointing
+
+copy on write
+
+#### 7.12 CASE STUDY: VMWARE
+
+##### 7.12.1 The Early History of VMware
+
+below, VMware Workstation for Linux, VMware Workstation for Windows, VMotion
+
+##### 7.12.2 VMware Workstation
+
+ACM Software System Award, WinTel, vertically integrated
+
+##### 7.12.3 Challenges in Bringing Virtualization to the x86
+
+adding a level of indirection, virtual machines, Compatibility, Performance, Isolation, The x86 architecture was not virtualizable, The x86 architecture was of daunting complexity, x86 machines had diverse peripherals, Need for a simple user experience
+
+##### 7.12.4 VMware Workstation: Solution Overview
+
+Virtualizing the x86 Architecture, dynamic binary translation, software fault isolation, A Guest Operating System Centric Strategy, The Virtual Hardware Platform, not, hardware-independent encapsulation, The Role of the Host Operating System, VMX, VMX driver, world switch
+
+##### 7.12.5 The Evolution of VMware Workstation
+
+##### 7.12.6 ESX Server: VMware's type 1 Hypervisor
+
+#### 7.13 RESEARCH ON VIRTUALIZATION AND THE CLOUD
+
+### 8 MULTIPLE PROCESSOR SYSTEMS
+
