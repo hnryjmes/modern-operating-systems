@@ -1413,3 +1413,143 @@ Virtualizing the x86 Architecture, dynamic binary translation, software fault is
 
 ### 8 MULTIPLE PROCESSOR SYSTEMS
 
+loosely coupled, tightly coupled
+
+#### 8.1 MULTIPROCESSORS
+
+shared-memory multiprocessor
+
+##### 8.1.1 Multiprocessor Hardware
+
+UMA, Uniform Memory Access, NUMA, Nonuniform Memory Access, UMA Multiprocessors with Bus-Based Architectures, cache line, cache-coherence protocol, UMA Multiprocessors Using Crossbar Switches, crossbar switch, crosspoint, nonblocking network, UMA Multiprocessors Using Multistage Switching Networks, multistage switching networks, omega network, perfect shuffle, blocking network, interleaved, NUMA Multiprocessors, NC-NUMA, Non Cache-coherent NUMA, CC-NUMA, Cache-Coherent NUMA, directory-based multiprocessor, Multicore Chips, Moore's Law, cores, die, snooping, CMPs, Chip MultiProcessors, System On a Chip, SoC, Manycore Chips, Manycore chips
+
+"While there is no hard threshold beyond which a multicore becomes a manycore, an easy distinction is that you probably have a manycore if you no longer care about losing one or two cores."
+
+coherency wall, GPU
+
+"Compared to general-purpose processors, GPUs spend more of their transistor budget on the circuits that perform calculations and less on caches and control logic."
+
+GPGPU, OpenGL, CUDA
+
+"An important different between programming GPUs and programming general-purpose processors is that GPUs are essentially “single instruction multiple data” machines, which means that a large number of cores execute exactly the same instruction but on different pieces of data."
+
+Heterogenous Multicores, heterogenous multicore, Programming with Multiple Cores
+
+##### 8.1.2 Multiprocessor Operating System Types
+
+Each CPU Has Its Own Operating System
+
+"This scheme is still better than having n separate computers since it allows all the machines to share a set of disks and other I/O devices, and it also allows the memory to be shared flexibly."
+
+Master-Slave Multiprocessors, master-slave, Symmetric Multiprocessors, SMP, Symmetric MultiProcessor, big kernel lock
+
+##### 8.1.3 Multiprocessor Synchronization
+
+spin lock, Spinning vs. Switching, MONITOR/MWAIT
+
+##### 8.1.4 Multiprocessor Scheduling
+
+Time Sharing, smart scheduling, affinity scheduling, two-level scheduling algorithm, Space Sharing, space sharing, Gang Scheduling, gang scheduling, coscheduling
+
+#### 8.2 MULTICOMPUTERS
+
+multicomputers, cluster computers, COWS, Clusters Of Workstations
+
+"Cloud computing services are always built on multicomputers because they need to be large."
+
+##### 8.2.1 Multicomputer Hardware
+
+headless workstation, Interconnection Technology, grid, mesh, diameter, double torus, cube, hypercube
+
+"Many parallel computers use a hypercube topology because the diameter grows linearly with the dimensionality."
+
+packet, store-and-forward packet switching, circuit switching, wormhole routing, Network Interfaces, network processors
+
+##### 8.2.2 Low-Level Communication Software
+
+multiqueue, affinity, Node-to-Network Interface Communication, Remote Direct Memory Access, RDMA, Remote Direct Memory Access
+
+##### 8.2.3 User-Level Communication Software
+
+Send and Receive, Blocking versus Nonblocking Calls, blocking calls, synchronous calls, nonblocking calls, asynchronous calls, pop-up thread, active messages
+
+##### 8.2.4 Remote Procedure Call
+
+RPC, Remote Procedure Call, client stub, server stub, marshalling, Implementation Issues
+
+##### 8.2.5 Distributed Shared Memory
+
+DSM, Distributed Shared Memory, Replication, False Sharing, false sharing, Achieving Sequential Consistency
+
+##### 8.2.6 Multicomputer Scheduling
+
+##### 8.2.7 Load Balancing
+
+processor allocation algorithms, A Graph-Theoretic Deterministic Algorithm, A Sender-Initiated Distributed Heuristic Algorithm, A Receiver-Initiated Distributed Heuristic Algorithm
+
+#### 8.3 DISTRIBUTED SYSTEMS
+
+distributed system, middleware
+
+##### 8.3.1 Network Hardware
+
+LANs, Local Area Networks, WANs, Wide Area Networks, Ethernet, Ethernet, vampire tap, binary exponential backoff, bridges, The Internet, Hosts, Routers
+
+##### 8.3.2 Network Services and Protocols
+
+Network Services, Connection-oriented service, connectionless service, quality of service, acknowledgement packet, datagram service, acknowledged datagram service, request-reply service, Network Protocols, protocol, protocol stack, IP, Internet Protocol, IP addresses, TCP, Transmission Control Protocol
+
+"To use TCP, a process first establishes a connection to a remote process."
+
+"The process required is specified by the IP address of a machine and a port number on that machine, to which processes interested in receiving incoming connections listen."
+
+"Once that has been done, it just pumps bytes into the connection and they are guaranteed to come out the other end undamaged and in the correct order."
+
+"The TCP implementation achieves this guarantee by using sequence numbers, checksums, and retransmissions of incorrectly received packets."
+
+"All of this is transparent to the sending and receiving processes."
+
+"They just see reliable interprocess communication, just like a UNIX pipe."
+
+DNS, Domain Name System
+
+##### 8.3.3 Document-Based Middleware
+
+Web pages, hyperlinks, Web browser, URL, Uniform Resource Locator
+
+##### 8.3.4 File-System-Based Middleware
+
+Transfer Model, upload/download model, remote-access model, The Directory Hierarchy, Naming Transparency, location transparency, location independence, Semantics of File Sharing, sequential consistency, session semantics
+
+##### 8.3.5 Object-Based Middleware
+
+object, methods, CORBA, Common Object Request Broker Architecture, ORBs, Object Request Brokers, IDL, Interface Definition Language, skeleton, IIOP, Internet InterOrb Protocol, object adapter
+
+##### 8.3.6 Coordination-Based Middleware
+
+coordination-based middleware, Linda, tuple space, tuple, template, Publish/Subscribe, publish/subscribe
+
+"When an information producer has a new piece of information (e.g., a new stock price), it broadcasts the information as a tuple on the network."
+
+publishing, subscribe
+
+"Subscription is done by telling a tuple daemon process on the same machine that monitors published tuples what subjects to look for."
+
+#### 8.4 RESEARCH ON MULTIPLE PROCESSOR SYSTEMS
+
+"Much systems research in recent years has also gone into making large applications scale to multicore and multiprocessor environments."
+
+#### 8.5 SUMMARY
+
+"Computer systems can be made faster and more reliable by using multiple CPUs."
+
+"Four organizations for multi-CPU systems are multiprocessors, multicomputers, virtual machines, and distributed systems."
+
+"A multiprocessor consists of two or more CPUs that share a common RAM."
+
+"Multicomputers also have two or more CPUs, but these CPUs each have their own private memory."
+
+"Distributed systems are loosely coupled systems each of whose nodes is a complete computer with a complete set of peripherals and its own operating system."
+
+### 9 SECURITY
+
