@@ -1553,3 +1553,231 @@ publishing, subscribe
 
 ### 9 SECURITY
 
+vulnerability, exploit, virus, worm
+
+"Also worth noting is that while this is a book on operating systems, operating systems security and network security are so intertwined that it is really impossible to separate them."
+
+#### 9.1 THE SECURITY ENVIRONMENT
+
+security, protection mechanisms
+
+##### 9.1.1 Threats
+
+confidentiality, integrity, availability, denial-of-service, crackers, portscan, dual use, botnets, bot, zombie, privacy
+
+##### 9.1.2 Attackers
+
+attackers, intruders, adversaries, script-kiddies
+
+#### 9.2 OPERATING SYSTEMS SECURITY
+
+cryptography, hardening
+
+##### 9.2.1 Can We Build Secure Systems?
+
+"To build a secure system, have a security model at the core of the operating system that is simple enough that the designers can actually understand it, and resist all pressure to deviate from it in order to add new features."
+
+##### 9.2.2 Trusted Computing Base
+
+trusted systems, TCB, Trusted Computing Base
+
+#### 9.3 CONTROLLING ACCESS TO RESOURCES
+
+##### 9.3.1 Protection Domains
+
+domain, right, POLA, Principle of Least Authority
+
+"In general, security works best when each domain has the minimum objects and privileges to do its work - and no more."
+
+##### 9.3.2 Access Control Lists
+
+ACL, Access Control List, subjects, principals, objects, group, role, wildcard
+
+##### 9.3.3 Capabilities
+
+capability list, C-list, capabilities, tagged architecture, generic rights
+
+#### 9.4 FORMAL MODELS OF SECURE SYSTEMS
+
+protection commands
+
+##### 9.4.1 Multilevel Security
+
+discretionary access control, mandatory access controls, The Bell-LaPadula Model, Bell-LaPadula model, multilevel security system, simple security property
+
+"For example, a general can read a lieutenant's documents but a lieutenant cannot read a general's documents."
+
+"For example, a lieutenant can append a message to a general's mailbox telling everything he knows, but a general cannot append a message to a lieutenant's mailbox telling everything he knows because the general may have seen top-secret documents that may not be disclosed to a lieutenant."
+
+"Roughly summarized, processes can read down and write up, but not the reverse."
+
+The Biba Model, The simple integrity property, The integrity * property
+
+##### 9.4.2 Covert Channels
+
+"Even in a system which has a proper security model underlying it and which has been proven to be secure and is correctly implemented, security leaks can still occur."
+
+confinement problem, covert channel, Steganography, steganography
+
+#### 9.5 BASICS OF CRYPTOGRAPHY
+
+plaintext, ciphertext, security by obscurity, keys, Kerckhoffs' principle
+
+##### 9.5.1 Secret-Key Cryptography
+
+monoalphabetic substitution, digrams, secret-key cryptography, symmetric-key cryptography
+
+##### 9.5.2 Public-Key Cryptography
+
+public-key cryptography
+
+"Although squaring and square rooting are inverse operations, they differ enormously in their computational complexity."
+
+RSA
+
+##### 9.5.3 One-Way Functions
+
+cryptographic hash function
+
+##### 9.5.4 Digital Signatures
+
+SHA-1, Secure Hash Algorithm, SHA-256, SHA-512, signature block, certificate, CA, Certification Authority, PKI, Public Key Infrastructure
+
+##### 9.5.5 Trusted Platform Modules
+
+TPM, Trusted Platform Module, Remote attestation, PCR, Platform Configuration Register, nonce
+
+"Interestingly enough, the one thing TPM does not do is make computers more secure against external attacks."
+
+#### 9.6 AUTHENTICATION
+
+Weak Passwords, war dialers, UNIX Password Security, salt, One-Time Passwords, one-time passwords, one-way hash chain, Challenge-Response Authentication, challenge-response
+
+##### 9.6.1 Authentication Using a Physical Object
+
+Stored value cards, smart cards, side-channel
+
+##### 9.6.2 Authentication Using Biometrics
+
+biometrics, iris recognition, gabor wavelet
+
+#### 9.7 EXPLOITING SOFTWARE
+
+drive-by-download, malware, Red Queen effect
+
+##### 9.7.1 Buffer Overflow Attacks
+
+shellcode, nop sled, heap spraying, Stack Canaries, stack canaries, Avoiding Stack Canaries, Data Execution Prevention, Code injection attacks, NX bit, W^X, DEP, Data Execution Prevention, Code Reuse Attacks, return to libc, return-oriented programming, return to libc, PLT, Procedure Linkage Table, ROP, Return-Oriented Programming, gadgets, Address-Space Layout Randomization, ASLR, Address Space Layout Randomization, Bypassing ASLR, Noncontrol-Flow Diverting Attacks, Buffer Overflows-The Not So Final Word
+
+##### 9.7.2 Format String Attacks
+
+format string attack
+
+##### 9.7.3 Dangling Pointers
+
+heap feng shui
+
+##### 9.7.4 Null Pointer Dereference Attacks
+
+##### 9.7.5 Integer Overflow Attacks
+
+##### 9.7.6 Command Injection Attacks
+
+command injection
+
+##### 9.7.7 Time of Check to Time of Use Attacks
+
+race conditions, TOCTOU, Time of Check to Time of Use
+
+#### 9.8 INSIDER ATTACKS
+
+##### 9.8.1 Logic Bombs
+
+logic bomb, time bombs
+
+##### 9.8.2 Back Doors
+
+back door, code reviews
+
+##### 9.8.3 Login Spoofing
+
+login spoofing
+
+#### 9.9 MALWARE
+
+malware, backdoor, zombie, botnet, keylogger
+
+"To guard against these attacks, the credit card companies all use artificial intelligence software to detect peculiar spending patterns."
+
+identity theft
+
+##### 9.9.1 Trojan Horses
+
+Trojan horse
+
+##### 9.9.2 Viruses
+
+virus, How Viruses Work, payload, Companion Viruses, companion virus, Executable Program Viruses, overwriting viruses, parasitic viruses, cavity viruses, Memory-Resident Viruses, memory-resident virus, Boot Sector Viruses, boot sector viruses, Device Driver Viruses, device driver virus, Macro Viruses, macro virus, Source Code Viruses, source code viruses, How Viruses Spread
+
+##### 9.9.3 Worms
+
+worm, finger daemon, CERT, Computer Emergency Response Team
+
+##### 9.9.4 Spyware
+
+spyware, How Spyware Spreads, drive-by download, activeX controls, Actions Taken by Spyware, browser hijacking, adware
+
+##### 9.9.5 Rootkits
+
+rootkit, Types of Rootkits, Firmware rootkits, Hypervisor rootkits, blue pill, Kernel rootkits, Library rootkits, Application rootkits, Rootkit Detection, The Sony Rootkit
+
+#### 9.10 DEFENSES
+
+defense in depth
+
+##### 9.10.1 Firewalls
+
+firewall, stateless firewall, port number, stateful firewalls, IDS, Intrusion Detection System, personal firewalls
+
+##### 9.10.2 Antivirus and Anti-Antivirus Techniques
+
+antivirus programs, Virus Scanners, goat file, polymorphic virus, mutation engine, Integrity Checkers, integrity checking, Behavioral Checkers, behavioral checking, Virus Avoidance
+
+##### 9.10.3 Code Signing
+
+##### 9.10.4 Jailing
+
+jailing
+
+##### 9.10.5 Model-Based Intrusion Detection
+
+IDS, Intrusion Detection System, static model-based intrusion detection, mimicry attack, honeypot
+
+##### 9.10.6 Encapsulating Mobile Code
+
+applets, agents, mobile code, Sandboxing, sandboxing, reference monitor, Interpretation, JVM, Java Virtual Machine
+
+##### 9.10.7 Java Security
+
+JVM, Java Virtual Machine, byte code, JDK, Java Development Kit, 1.0
+
+#### 9.11 RESEARCH ON SECURITY
+
+"It seems that especially botnets based on peer-to-peer communication will be exceedingly hard to dismantle in the near future."
+
+#### 9.12 SUMMARY
+
+"A fundamental component of security for operating systems concerns access control to resources."
+
+"One way to keep information secret is to encrypt is and manage the keys carefully."
+
+"Many kinds of bugs in the code can be exploited to take over programs and systems."
+
+"Insiders, such as company employees, can defeat system security in a variety of ways."
+
+"The best strategy is defense in depth, using multiple techniques."
+
+"Some of these include firewalls, virus scanners, code signing, jailing, and intrusion detection systems, and encapsulating mobile code."
+
+### 10 CASE STUDY 1: UNIX, LINUX, AND ANDROID
+
