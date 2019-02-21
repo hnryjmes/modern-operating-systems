@@ -1781,3 +1781,160 @@ JVM, Java Virtual Machine, byte code, JDK, Java Development Kit, 1.0
 
 ### 10 CASE STUDY 1: UNIX, LINUX, AND ANDROID
 
+#### 10.1 HISTORY OF UNIX AND LINUX
+
+##### 10.1.1 UNICS
+
+MULTICS, MULTiplexed Information and Computing Service, UNICS, UNiplexed Information and Computing Service, UNIX
+
+##### 10.1.2 PDP-11 UNIX
+
+##### 10.1.3 Portable UNIX
+
+portable C compiler
+
+##### 10.1.4 Berkeley UNIX
+
+1BSD, First Berkeley Software Distribution, 2BSD, 3BSD, 4BSD, 32V, TCP/IP
+
+##### 10.1.5 Standard UNIX
+
+SVID, System V Interface Definition, POSIX, 1003.1
+
+##### 10.1.6 MINIX
+
+"MINIX was one of the first UNIX-like systems based on a microkernel design."
+
+GUI, Graphical User Interface, X Window System, X
+
+##### 10.1.7 Linux
+
+Linux
+
+"De facto, it was a rewrite of MINIX, the only system Torvalds had source code for."
+
+GPL, GNU Public License
+
+"Users may use, copy, modify, and redistribute the source and binary code freely."
+
+#### 10.2 OVERVIEW OF LINUX
+
+##### 10.2.1 Linux Goals
+
+##### 10.2.2 Interfaces to Linux
+
+##### 10.2.3 The Shell
+
+shell
+
+"It is heavily based on the original UNIX shell, Bourne shell (written by Steve Bourne, then at Bell Labs)."
+
+"Its name is an acronym for Bourne Again SHell."
+
+prompt, magic characters, wild cards, standard input, standard output, standard error, filter, pipe symbol, pipeline, shell scripts
+
+"Thus a shell script is really a program written in shell language."
+
+##### 10.2.4 Linux Utility Programs
+
+"Another important tool is make, which is used to maintain large programs whose source code consists of multiple files."
+
+header files
+
+##### 10.2.5 Kernel Structure
+
+VFS, Virtual File System
+
+#### 10.3 PROCESSES IN LINUX
+
+##### 10.3.1 Fundamental Concepts
+
+"The main active entities in a Linux system are the processes."
+
+daemons, parent process, child process, PID, Process Identifier
+
+"It is possible to create a channel between two processes into which one process can write a stream of bytes for the other to read."
+
+pipes, signal, process group
+
+##### 10.3.2 Process-Management System Calls in Linux
+
+zombie state
+
+##### 10.3.3 Implementation of Processes and Threads in Linux
+
+tasks, Scheduling parameters, Memory image, Signals, Machine registers, System call state, File descriptor table, Accounting, Kernel stack, Miscellaneous, copy on write, Threads in Linux
+
+"Historically, processes were resource containers and threads were the units of execution."
+
+"In 2000, Linux introduced a powerful new system call, clone, that blurred the distinction between processes and threads and possibly even inverted the primacy of the two concepts."
+
+##### 10.3.4 Scheduling in Linux
+
+jiffy, higher-resolution timers, runqueue, O(1) scheduler, Completely Fair Scheduler, CFS, waitqueue, Synchronization in Linux, big kernel lock
+
+##### 10.3.5 Booting Linux
+
+MBR, Master Boot Record, boot, GRUB, GRand Unified Bootloader
+
+#### 10.4 MEMORY MANAGEMENT IN LINUX
+
+##### 10.4.1 Fundamental Concepts
+
+text segment, data segment, BSS, Block Started by Symbol, heap, shared text segments, memory-mapped files
+
+##### 10.4.2 Memory Management System Calls in Linux
+
+##### 10.4.3 Implementation of Memory Management in Linux
+
+Physical Memory Management, ZONE_DMA, ZONE_DMA32, ZONE_NORMAL, ZONE_HIGHMEM, pinned, page descriptors, Memory-Allocation Mechanisms, page allocator, buddy algorithm, slab allocator, object caches, Virtual Address-Space Representation, huge pages, PAE, Physical Address Extension
+
+##### 10.4.4 Paging in Linux
+
+swapper process, page frame reclaiming algorithm, page daemon, swap area, The Page Replacement Algorithm, PFRA, Page Frame Reclaiming Algorithm, swappiness, laptop mode
+
+#### 10.5 INPUT/OUTPUT IN LINUX
+
+##### 10.5.1 Fundamental Concepts
+
+special files, block special file, Character special files, major device, minor device
+
+##### 10.5.2 Networking
+
+socket
+
+"Sockets are analogous to mailboxes and telephone wall sockets in that they allow users to interface to the network, just as mailboxes allow people to interface to the postal system and telephone wall sockets allow them to plug in telephones and connect to the telephone system."
+
+TCP, Transmission Control Protocol, UDP, User Datagram Protocol, IP, Internet Protocol
+
+##### 10.5.3 Input/Output System Calls in Linux
+
+ADSL, Asymmetric Digital Subscriber Line
+
+##### 10.5.4 Implementation of Input/Output in Linux
+
+Driver-Kernel Interface, cache, I/O scheduler, Linux elevator scheduler, raw block files, line disciplines, network devices
+
+##### 10.5.5 Modules in Linux
+
+loadable modules
+
+#### 10.6 THE LINUX FILE SYSTEM
+
+##### 10.6.1 Fundamental Concepts
+
+absolute path, working directory, relative path, link, locking, shared locks, exclusive locks
+
+##### 10.6.2 File-System Calls in Linux
+
+file descriptor
+
+##### 10.6.3 Implementation of the Linux File System
+
+The Linux Virtual File System, superblock, i-nodes, inodes, dentry, file, The Linux Ext2 File System, ext2, ext, superblock, i-node table, open-file-description table, single indirect block, double indirect block, triple indirect block, The Linux Ext4 File System, journaling file system, Ext3, Ext4, JBD, Journaling Block Device, extents, The /proc File System, /proc
+
+##### 10.6.4 NFS: The Network File System
+
+NFS, Network File System, NFS Architecture, NFS Protocols, protocol, file handle, automounting, stateless, NFS Implementation, virtual -node, v-node, r-node, remote i-node, read ahead, NFS Version 4, stateful
+
+#### 10.7 SECURITY IN LINUX
