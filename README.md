@@ -1938,3 +1938,90 @@ The Linux Virtual File System, superblock, i-nodes, inodes, dentry, file, The Li
 NFS, Network File System, NFS Architecture, NFS Protocols, protocol, file handle, automounting, stateless, NFS Implementation, virtual -node, v-node, r-node, remote i-node, read ahead, NFS Version 4, stateful
 
 #### 10.7 SECURITY IN LINUX
+
+##### 10.7.1 Fundamental Concepts
+
+UID, User ID, GIDs, Group IDs, superuser, root, SETUID bit, effective UID
+
+##### 10.7.2 Security System Calls in Linux
+
+##### 10.7.3 Implementation of Security in Linux
+
+#### 10.8 ANDROID
+
+graphical user interface, GUI
+
+##### 10.8.1 Android and Google
+
+Android Open Source Project, AOSP, CDD, Compatibility Definition Document
+
+##### 10.8.2 History of Android
+
+Early Development, SDK, Software Development Kit, Android 1.0, Continued Development, Google Play services
+
+##### 10.8.3 Design Goals
+
+##### 10.8.4 Android Architecture
+
+Android framework
+
+##### 10.8.5 Linux Extensions
+
+Wake Locks, wake locks, suspend blockers, Out-Of-Memory Killer
+
+##### 10.8.6 Dalvik
+
+JIT, Just-in-Time
+
+##### 10.8.7 Binder IPC
+
+Binder Kernel Module, RPC, remote procedure call, transaction, Binder User-Space API, IBinder, Binder, Parcel, Parcel, BinderProxy, unmarshalling, marshalling, Binder Interfaces and AIDL, Parcel, AIDL, Android Interface Definition Language, IExample, IExample.Stub, IExample, IExample.Proxy, Parcel
+
+##### 10.8.8 Android Applications
+
+Android Package, package manager, activity manager, Activities, activity, Services, service, Receivers, receiver, Content Providers, content provider
+
+##### 10.8.9 Intents
+
+intent, intent, explicit intent, implicit intent, intent resolution, ResolverActivity
+
+##### 10.8.10 Application Sandboxes
+
+"Traditionally in operating systems, applications are seen as code executing as the user, on the user's behalf."
+
+"There is a disconnect between the application model supported by the operating system and the one actually in use."
+
+"Android attempts to address this with a core premise: that an application is actually the developer of that application running as a guest on the user's device."
+
+"Linux user IDs thus create a sandbox for each application, with their own isolated area of the file system, just as they create sandboxes for users on a desktop system."
+
+##### 10.8.11 Security
+
+"We have two problems to solve."
+
+"First, we do not want to give applications access to wide swaths of data that they do not really need."
+
+"Second, they need to be given access to any data sources, even ones they do not have a priori knowledge about."
+
+##### 10.8.12 Process Model
+
+Starting Processes, Process Lifecycle, Process Dependencies
+
+#### 10.9 SUMMARY
+
+"Linux began its life as an open-source, full-production UNIX clone, and is now used on machines ranging from smartphones and notebook computers to supercomputers."
+
+"The key concepts in Linux include the process, the memory model, I/O, and the file system."
+
+"The memory model consists of three segments per process: text, data, and stack."
+
+"I/O devices are accessed using special files, each having a major device number and a minor device number."
+
+"The file system is hierarchical with files and directories."
+
+"Protection is based on controlling read, write, and execute access for the owner, group, and others."
+
+"The Android security model is different from the Linux model and carefully sandboxes each app because all apps are regarded as untrustworthy."
+
+### 11 CASE STUDY 2: WINDOWS 8
+
