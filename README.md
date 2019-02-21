@@ -2025,3 +2025,130 @@ Starting Processes, Process Lifecycle, Process Dependencies
 
 ### 11 CASE STUDY 2: WINDOWS 8
 
+#### 11.1 HISTORY OF WINDOWS THROUGH WINDOWS 8.1
+
+MS-DOS, MS-DOS-based Windows, NT-based Windows, Modern Windows
+
+##### 11.1.1 1980s: MS-DOS
+
+personal computer, MS-DOS 1.0, MicroSoft Disk Operating System
+
+"MS-DOS was a 16-bit real-mode, single-user, command-line-oriented operating system consisting of 8 KB of memory resident code."
+
+##### 11.1.2 1990s: MS-DOS-based Windows
+
+Windows, Windows 3.0
+
+"Windows 3.0 was not a true operating system, but a graphical environment built on top of MS-DOS, which was still in control of the machine and the file system."
+
+Windows 95, Windows 98, Windows Me
+
+##### 11.1.3 2000s: NT-based Windows
+
+OS/2, NT OS/2, NT
+
+"NT was designed to be portable across different processors and emphasized security and reliability, as well as compatibility with the MS-DOS-based versions of Windows."
+
+"Programmers familiar only with UNIX find the architecture of NT to be quite difficult."
+
+"UNIX was first designed in the 1970s for single-processor, 16-bit, tiny-memory, swapping systems where the process was the unit of concurrency and composition, and fork/exec were inexpensive operations (since swapping systems frequently copy processes to disk anyway)."
+
+"NT was designed in the early 1990s, when multi-processor, 32-bit, multimegabyte, virtual memory systems were common."
+
+Win32, Windows NT 4.0, Windows 2000, Windows XP, Windows Vista
+
+"The original NT release of 3 million lines of C/C++ that had grown to 16 million in NT 4, 30 million in 2000, and 50 million in XP."
+
+"It is over 70 million lines in Vista and more in Windows 7 and 8."
+
+DLLs, Dynamic Link Libraries, EXEs, Executables, netbook, Windows 7
+
+"Windows 7 quickly supplanted Vista and ultimately Windows XP to be the most popular version of Windows to date."
+
+##### 11.1.5 2010s: Modern Windows
+
+"The old world of portable computers was replaced by machines with small screens that ran applications readily downloadable from the Web."
+
+"Microsoft began a process to redesign itself as a devices and services company in order to better compete with Google and Apple."
+
+Windows 8, MinWin
+
+"Support of phones and tablets by Windows required support for the popular ARM architecture, as well as new Intel processors targeting those devices."
+
+#### 11.2 PROGRAMMING WINDOWS
+
+RPCs, Remote-Procedure-Calls, NTOS, subsystems, WinRT, Modern Software Development Kit, MSDK, Microsoft Development Kit, AppContainer, broker processes, CreateProcess, LPC, Local Procedure Call
+
+##### 11.2.1 The Native NT Application Programming Interface
+
+"Operating system objects do provide data hiding and abstraction, but they lack some of the most basic properties of object-oriented systems such as inheritance and polymorphism."
+
+handle, security descriptor, sections, object manager, Unicode, NT namespace, device objects, driver object
+
+##### 11.2.2 The Win32 Application Programming Interface
+
+Win32 API
+
+"Most low-level Win32 functions have native NT equivalents, which is not surprising as Win32 was designed with NT in mind."
+
+CreateProcessW, CreateProcessA, WOW, Windows-on-Windows
+
+"WOW32 is used on 32-bit x86 systems to run 16-bit Windows 3.x applications by mapping the system calls and parameters between the 16-bit and 32-bit worlds."
+
+"Win32 has calls for creating and managing both processes and threads."
+
+"There are also many calls that relate to interprocess communication, such as creating, destroying, and using mutexes, semaphores, events, communication ports, and other IPC objects."
+
+file mapping, journal, token, ACL, Access Control List
+
+##### 11.2.3 The Windows Registry
+
+"Since the NT namespace is constructed afresh every time the system boots, how does the system know about any specific details of the system configuration?"
+
+registry, hives, COM, Component Object-Model, SAM, Security Access Manager
+
+"Unfortunately, the registry has become seriously disorganized over time as Windows has evolved."
+
+"There are poorly defined conventions about how the configuration information should be arranged, and many applications take an ad hoc approach."
+
+"Most users, applications, and all drivers run with full privileges and frequently modify system parameters in the registry directly - sometimes interfering with each other and destabilizing the system."
+
+regedit, PowerShell
+
+"It is very easy to render your system unable to boot, or damage the installation of applications so that you cannot fix them without a lot of wizardry."
+
+"The complexity and fragility of the registry led designers of new operating systems - in particular iOS and Android - to avoid anything like it."
+
+#### 11.3 SYSTEM STRUCTURE
+
+##### 11.3.1 Operating System Structure
+
+executive, kernel, APCs, Asynchronous Procedure Calls, HAL, Hardware Abstraction Layer, hypervisor, Hyper-V, partition, virtual processors
+
+"The hypervisor schedules the virtual processors on the physical processors."
+
+DRM, Digital Rights Management, The Hardware Abstraction Layer
+
+"Most of the source code for the NTOS kernel is written in C rather than assembly language (only 2% is assembly on x86, and less than 1% on x64)."
+
+"However, all this C code cannot just be scooped up from an x86 system, plopped down on, say, an ARM system, recompiled, and rebooted owing to the many hardware differences between processor architectures that have nothing to do with the different instruction sets and which cannot be hidden by the compiler."
+
+ACPI, Advanced Configuration and Power Interface, The Kernel Layer
+
+"The most central abstraction is threads, but the kernel also implements exception handling, traps, and several kinds of interrupts."
+
+Control objects, Dispatcher objects, Deferred Procedure Calls, DPC, Deferred Procedure Call, ISRs, Interrupt Service Routines, Asynchronous Procedure Calls, APC, Asynchronous Procedure Call, Dispatcher Objects, dispatcher object, dispatcher_header, WaitForMultipleObjects, notification object, Synchronization objects, The Executive Layer, object manager, I/O manager, BSOD, Blue Screen Of Death, PLug-and-play, process manager, memory manager, cache manager, security reference monitor, Common Criteria, configuration manager, ALPC, Advanced LPC, WNF, Windows Notification Facility, The Device Drivers, device drivers, device stack, filter, file-system filter drivers, miniports, class driver
+
+##### 11.3.2 Booting Windows
+
+flashing, firmware, UEFI, Unified Extensible Firmware Interface, boot drivers, TPM, Trusted Platform Module, safe-boot, recovery console
+
+##### 11.3.3 Implementation of the Object Manager
+
+key, referenced pointer, Handles, handles, kernel handles, The Object Namespace, Parse, application verifier, IRP, I/O Request Packet, KQUEUES
+
+##### 11.3.4 Subsystems, DLLs, and User-Mode Services
+
+DLL hell, IAT, Import Address Table, ActiveX controls, side-by-side, svchost.exe
+
+#### 11.4 PROCESSES AND THREADS IN WINDOWS
