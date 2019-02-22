@@ -2243,3 +2243,127 @@ mitigation, defense-in-depth, return-oriented-programming, return to libC, ASLR,
 
 ### 12 OPERATING SYSTEM DESIGN
 
+#### 12.1 THE NATURE OF THE DESIGN PROBLEM
+
+##### 12.1.1 Goals
+
+"The most important, but probably hardest task of an operating system is to define the right abstractions."
+
+##### 12.1.2 Why Is It Hard to Design an Operating System?
+
+"When you have a product that none of the designers can hope to fully understand, it should be no surprise that the results are often far from optimal."
+
+#### 12.2 INTERFACE DESIGN
+
+"An operating system provides a set of abstractions, mostly implemented by data types (e.g., files) and operations on them (e.g., read)."
+
+"Together, these form the interface to its users."
+
+##### 12.2.1 Guiding Principles
+
+Principle 1: Simplicity, Principle 2: Completeness, Principle 3: Efficiency
+
+##### 12.2.2 Paradigms
+
+architectural coherence, User-Interface Paradigms, Execution Paradigms, algorithmic paradigm, event-driven paradigm, Data Paradigms
+
+##### 12.2.3 The System-Call Interface
+
+#### 12.3 IMPLEMENTATION
+
+##### 12.3.1 System Structure
+
+Layered Systems, Exokernels, end-to-end argument, Microkernel-Based Client-Server Systems
+
+"A compromise between having the operating system do everything and the operating system do nothing is to have the operating system do a little bit."
+
+Extensible Systems, Kernel Threads
+
+##### 12.3.2 Mechanism vs. Policy
+
+##### 12.3.3 Orthogonality
+
+"Good system design consists of separate concepts that can be combined independently."
+
+orthogonality
+
+##### 12.3.4 Naming
+
+##### 12.3.5 Binding Time
+
+early binding, late binding
+
+##### 12.3.6 Static vs. Dynamic Structures
+
+##### 12.3.7 Top-Down vs. Bottom-Up Implementation
+
+##### 12.3.8 Synchronous vs. Asynchronous Communication
+
+event-driven paradigm
+
+##### 12.3.9 Useful Techniques
+
+Hiding the Hardware, Indirection, Reusability, Reentrancy, Brute Force, Check for Errors First
+
+#### 12.4 PERFORMANCE
+
+##### 12.4.1 Why Are Operating Systems Slow?
+
+##### 12.4.2 What Should Be Optimized?
+
+##### 12.4.3 Space-Time Trade-offs
+
+##### 12.4.4 Caching
+
+##### 12.4.5 Hints
+
+hints
+
+##### 12.4.6 Exploiting Locality
+
+##### 12.4.7 Optimize the Common Case
+
+"It is frequently a good idea to distinguish between the most common case and the worst possible case and treat them differently."
+
+#### 12.5 PROJECT MANAGEMENT
+
+##### 12.5.1 The Mythical Man Month
+
+"Adding manpower to a late software project makes it later."
+
+##### 12.5.2 Team Structure
+
+chief programmer team, bad-news diode
+
+##### 12.5.3 The Role of Experience
+
+second system effect
+
+##### 12.5.4 No Silver Bullet
+
+#### 12.6 TRENDS IN OPERATING SYSTEM DESIGN
+
+hardware developments
+
+##### 12.6.1 Virtualization and the Cloud
+
+##### 12.6.2 Manycore Chips
+
+##### 12.6.3 Large-Address-Space Operating Systems
+
+##### 12.6.4 Seamless Data Access
+
+##### 12.6.5 Battery-Powered Computers
+
+##### 12.6.6 Embedded Systems
+
+#### 12.7 SUMMARY
+
+"Designing an operating system starts with determining what it should do."
+
+"The system should be well structured, using one of several known techniques, such as layering or client-server."
+
+"Performance is important, but optimizations should be chosen carefully so as not to ruin the system's structure."
+
+"Writing a system with a couple of people is different than producing a big system with 300 people."
+
