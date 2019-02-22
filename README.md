@@ -2152,3 +2152,94 @@ key, referenced pointer, Handles, handles, kernel handles, The Object Namespace,
 DLL hell, IAT, Import Address Table, ActiveX controls, side-by-side, svchost.exe
 
 #### 11.4 PROCESSES AND THREADS IN WINDOWS
+
+##### 11.4.1 Fundamental Concepts
+
+PEB, Process Environment Block, affinitized, TEB, Thread Environment Block, Thread Local Storage, user shared data, Processes, phase-change memories, flash devices, transactional memory, Jobs and Fibers, restricted token, Thread Pools and User-Mode Scheduling, thread pool, UMS, USer-Mode Scheduling, scheduler activations, Threads, CONTEXT, system process
+
+##### 11.4.2 Job, Process, Thread, and Fiber Management API Calls
+
+protected processes, Interprocess Communication, Mailslots, Sockets, Synchronization, critical sections, events, notification events, synchronization events
+
+##### 11.4.3 Implementation of Processes and Threads
+
+self-map, Shims, Scheduling, base priority, current priority, ideal processor, NUMA, NonUniform Memory Access, priority inversion, terminal server, RDP, Remote Desktop Protocol, DFSS, Dynamic Fair-Share Scheduling, scheduling groups
+
+#### 11.5 MEMORY MANAGEMENT
+
+##### 11.5.1 Fundamental Concepts
+
+Virtual Address Allocation, invalid page, committed, soft faults, reserved, Pagefiles, pagefile, standby list, copy-on-write
+
+##### 11.5.2 Memory-Management System Calls
+
+##### 11.5.3 Implementation of Memory Management
+
+TLB, Translation Lookaside Buffer, VAD, Virtual Address Descriptor, Page-Fault Handling, SuperFetch, LRU, Least-Recently Used, access violation, soft fault, hard fault, PTEs, Page-Table Entries, PDE, Page-Directory Entry, The Page Replacement Algorithm, memory pressure, Lots of memory available, Memory getting tight, Memory is tight, balance set manager, Physical Memory Management, PFN database, Page Frame Number database, mapped page writer, modified page writer, ZeroPage thread, store manager, swap file
+
+#### 11.6 CACHING IN WINDOWS
+
+#### 11.7 INPUT/OUTPUT IN WINDOWS
+
+##### 11.7.1 Fundamental Concepts
+
+dynamic disks, Volume Shadow Copies, bandwidth reservation
+
+##### 11.7.2 Input/Output API Calls
+
+I/O completion ports
+
+##### 11.7.3 Implementation of I/O
+
+Device Drivers, WDM, Windows Driver Model, WDK, Windows Driver Kit, driver verifier, WDF, Windows Driver Foundation, UMDF, User-Mode Driver Framework, KMDF, Kernel-Mode Driver Framework, I/O Request Packets, MDLs, Memory Descriptor Lists, Device Stacks, filter drivers
+
+#### 11.8 THE WINDOWS NT FILE SYSTEM
+
+FAT-16, FAT-32, NTFS, NT File System
+
+##### 11.8.1 Fundamental Concepts
+
+##### 11.8.2 Implementation of the NT File System
+
+File System Structure, MFT, Master File Table, base record, nonresident attribute, short name, default data stream, alternate data streams, immediate file, Storage Allocation, sparse files, reparse points, File Compression, Journaling, File Encryption, EFS, Encryption File System, BitLocker
+
+#### 11.9 WINDOWS POWER MANAGEMENT
+
+power manager, hibernation, standby mode, CS, connected standby
+
+#### 11.10 SECURITY IN WINDOWS 8
+
+"NT was originally designed to meet the U.S. Department of Defense's C2 security requirements (DoD 5200.28-STD), the Orange Book, which secure DoD systems must meet."
+
+##### 11.10.1 Fundamental Concepts
+
+SID, Security ID, access token, DACL, Discretionary ACL, impersonation, security descriptor, ACEs, Access Control Entries, SACL, System Access Control list, integrity level
+
+##### 11.10.2 Security API Calls
+
+##### 11.10.3 Implementation of Security
+
+integrity-level SIDs, Low-rights IE, UAC, User Account Control
+
+##### 11.10.4 Security Mitigations
+
+mitigation, defense-in-depth, return-oriented-programming, return to libC, ASLR, Address Space Layout Randomization, Code integrity, Patchguard, Windows Update, zero day, Windows Defender
+
+##### 11.11 SUMMARY
+
+"Kernel mode in Windows is structured in the HAL, the kernel and executive layers of NTOS, and a large number of device drivers implementing everything from device services to file systems and networking to graphics."
+
+"The executive is based on kernel-mode objects that represent the key executive data structures, including processes, threads, memory sections, drivers, devices, and synchronization objects - to mention a few."
+
+"The most important objects in Windows are processes, threads, and sections."
+
+"Windows supports demand-paged virtual memory."
+
+"I/O is performed by device drivers, which follow the Windows Driver Model."
+
+"The NTFS file system is based on a master file table, which has one record per file or directory."
+
+"Finally, Windows has a sophisticated security system based on access control lists and integrity levels."
+
+### 12 OPERATING SYSTEM DESIGN
+
